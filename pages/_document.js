@@ -1,8 +1,10 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-class MyDocument extends Document {
-  render() {
-    return (
+import Layout from '../components/layout/layout';
+import '../styles/globals.css';
+
+function MyApp({ Component, pageProps }) {
+  return (
       <Html lang='en'>
         <Head />
         <body>

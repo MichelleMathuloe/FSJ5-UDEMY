@@ -37,6 +37,8 @@ function AllEventsPage(props) {
 export async function getStaticProps() {
   const events = await getAllEvents();
 
+  console.log(events)
+
   return {
     props: {
       events: events,
