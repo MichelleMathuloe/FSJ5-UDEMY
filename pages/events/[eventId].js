@@ -48,6 +48,12 @@ export async function getStaticProps(context) {
 
   const event = await getEventById(eventId);
 
+  if (!event) {
+    return {
+      notFound: true, // Indicate that the page should return a 404 status
+    };
+  }
+
   return {
     props: {
       selectedEvent: event
